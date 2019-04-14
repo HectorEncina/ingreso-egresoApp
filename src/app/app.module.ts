@@ -1,7 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
-// modules
 import { NgModule } from '@angular/core';
+// modules
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+//
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+// Firebase
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+// environment
+import { environment } from 'src/environments/environment';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -29,7 +38,17 @@ import { SidebarComponent } from './share/sidebar/sidebar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+    SweetAlert2Module.forRoot({
+      buttonsStyling: false,
+      customClass: 'modal-content',
+      confirmButtonClass: 'btn btn-primary',
+      cancelButtonClass: 'btn'
+  })
   ],
   providers: [],
   bootstrap: [AppComponent]
