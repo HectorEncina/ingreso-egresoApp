@@ -1,6 +1,5 @@
 
 import * as fromUI from './ui.actions';
-import { from } from 'rxjs';
 
 
 export interface State {
@@ -9,7 +8,8 @@ export interface State {
 
 const initState: State = {
     isLoading: false
-}
+};
+
 
 export function uiReducer( state= initState, action: fromUI.acciones): State {
 
