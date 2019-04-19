@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
 import { Store } from '@ngrx/store';
-import {  ActivarLoadingAction, DesactivarLoadingAction } from '../share/ui.actions';
+import {  ActivarLoadingAction, DesactivarLoadingAction } from '../shared/ui.actions';
 import { AppState } from '../app.reducer';
 
 import * as  firebase from 'firebase';

@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { acciones } from '../share/ui.actions';
+import { acciones } from '../shared/ui.actions';
 import { IngresoEgreso } from './ingreso-egreso.model';
 export const SET_ITEMS = '[Ingreso Egreso] Set Items';
 export const UNSET_ITEMS = '[Ingres Egreso] Unset Items';

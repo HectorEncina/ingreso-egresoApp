@@ -68,7 +68,7 @@ export class IngresoEgresoService {
     const user = this.authService.getUsuario();
 
     return this.afDB.doc(`${ user.uid }/ingresos-egresos/items/${ uid }`)
-        .delete();
+      .delete();
 
   }
 }
